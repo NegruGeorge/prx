@@ -1,6 +1,21 @@
 
 const hre = require("hardhat");
 
+// TO DO TO DO TO DO: 
+
+// trebuie sa schimbati xenCryptoAddress cu adresa de pe base
+// trebuie sa schimbati userAddress cu userul vostru (cel cu care vreti sa dati claim)
+// COMANDA RUN:
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// COMANDA RUN:
+
+  // npx hardhat run scripts/cointoolView.js --network base 
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
 async function main() {
   // cointoolAdd baseGoerli: 0x18e37E322C432ed4b3a78d0DcF79dFEc97CfC57b
   const xenCryptoAddress = "0x9A74084370c9A43fA0b9B0185d64968870ec531f"
@@ -14,6 +29,8 @@ async function main() {
 
   // const view = CointTool.attach("0x2C5792AF38b5477ce5dE5d05fBF51C0F7e0Bd936")
 
+  // !!! Mandatory de schimbat !!!!
+  /// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   // adresa cu care ati facut mint si vreti sa vedeti cate adrese aveti:
   let userAddress = "0x2dAD87948265Fb9a64F1532fe6d0BfF12dFBeED1"
   

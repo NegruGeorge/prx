@@ -1,6 +1,20 @@
 
 const hre = require("hardhat");
 
+// TO DO TO DO TO DO: 
+
+// trebuie sa schimbati xenCryptoAddress cu adresa de pe base
+// trebuie sa schimbati userAddress cu userul vostru (cel cu care vreti sa dati claim)
+// COMANDA RUN:
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// COMANDA RUN:
+
+  // npx hardhat run scripts/cointoolF.js --network base 
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 async function main() {
   // base goerli 0x18e37E322C432ed4b3a78d0DcF79dFEc97CfC57b
   // adauga adresa de xen de pe base
@@ -18,9 +32,22 @@ async function main() {
 
   console.log("redeeem...");
 
+
+   // IMPORTANT
+  // in array se pune ce adrese vreti sa scoateti => e.g
+  // e.g daca aveti 10 adresse aveti array [1,2...,10], => se poate scoate [2,3] => se scoate adresa 2 sau 3
+  arrayClaimAddresses= []
+
+  startAddressIndex = 44;
+  endAddressIndex = 48;
+
+  for(let i = startAddressIndex; i<=endAddressIndex;i++)
+    arrayClaimAddresses.push(i);
+  console.log(arrayClaimAddresses)
+  // IMPORTANT
   // in array se pune ce adrese vreti sa scoateti => e.g
   // e.g daca aveti 10 adresse aveti array [1,2...,10], 
-  await coinTool.f([3,4],dataF,"0x01");
+  await coinTool.f(arrayClaimAddresses,dataF,"0x01");
    console.log("redeemed");
 
 }

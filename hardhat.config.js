@@ -46,12 +46,20 @@ module.exports = {
         accounts: { mnemonic: mnemonic },
     },
     goerliBase: {
-      url: "https://base-goerli.blockpi.network/v1/rpc/public	",
+      url: "https://base-goerli.public.blastapi.io",
       chainId: 84531,
       gasPrice: "auto",
       allowUnlimitedContractSize: true,
       timeout: 1800000,
       accounts: { mnemonic: mnemonic },
   },
+  base: {
+    url: "https://base.meowrpc.com",
+    chainId: 8453,
+    gasPrice: "auto",
+    allowUnlimitedContractSize: true,
+    timeout: 1800000,
+    accounts: { mnemonic: mnemonic },
+},
 },
 };

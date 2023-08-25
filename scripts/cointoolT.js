@@ -1,10 +1,26 @@
 
 const hre = require("hardhat");
 
+// TO DO TO DO TO DO: 
+
+// trebuie sa schimbati xenCryptoAddress cu adresa de pe base
+// trebuie sa schimbati userAddress cu userul vostru (cel cu care vreti sa dati claim)
+// COMANDA RUN:
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// COMANDA RUN:
+
+  // npx hardhat run scripts/cointoolT.js --network base 
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
 async function main() {
   // base goerli 0x18e37E322C432ed4b3a78d0DcF79dFEc97CfC57b
   // adauga adresa de xen de pe base
   const xenCryptoAddress = "0x9A74084370c9A43fA0b9B0185d64968870ec531f"
+  
   let dataT= `0x59635f6f000000000000000000000000${xenCryptoAddress.slice(2)}000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000249ff054df000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000`
 
   const CointTool = await hre.ethers.getContractFactory("CoinTool_App");
