@@ -57,6 +57,7 @@ module.exports = {
     url: "https://base.meowrpc.com",
     chainId: 8453,
     gasPrice: "auto",
+
     allowUnlimitedContractSize: true,
     timeout: 1800000,
     accounts: { mnemonic: mnemonic },

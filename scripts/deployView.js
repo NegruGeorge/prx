@@ -2,11 +2,11 @@
 const hre = require("hardhat");
 
 async function main() {
-  // last view address = 0x2C5792AF38b5477ce5dE5d05fBF51C0F7e0Bd936
+  // last view address = 0xf493830d33800035B945598F2520D18060f3e94e
 
-  
+
   // adauga adresa de xen de pe base
- const xenCryptoAddress = "0x9A74084370c9A43fA0b9B0185d64968870ec531f"
+ const xenCryptoAddress = "0xffcbF84650cE02DaFE96926B37a0ac5E34932fa5"
   const View = await hre.ethers.getContractFactory("CoinToolBatchMinterView");
   const view = await View.deploy(xenCryptoAddress);
 

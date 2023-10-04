@@ -17,17 +17,17 @@ const hre = require("hardhat");
 
 
 async function main() {
-  // cointoolAdd baseGoerli: 0x18e37E322C432ed4b3a78d0DcF79dFEc97CfC57b
-  const xenCryptoAddress = "0x9A74084370c9A43fA0b9B0185d64968870ec531f"
+  // cointoolAdd baseGoerli: 0x47459F869001aF28Cea2394c59e9EE4145311686
+  const xenCryptoAddress = "0xffcbF84650cE02DaFE96926B37a0ac5E34932fa5"
 
   const CointTool = await hre.ethers.getContractFactory("CoinTool_App");
-  const coinTool = await hre.ethers.getContractAt("CoinTool_App", "0x18e37E322C432ed4b3a78d0DcF79dFEc97CfC57b");
+  const coinTool = await hre.ethers.getContractAt("CoinTool_App", "0x47459F869001aF28Cea2394c59e9EE4145311686");
 
   // cointToolViewr = 0x2C5792AF38b5477ce5dE5d05fBF51C0F7e0Bd936
   const View = await hre.ethers.getContractFactory("CoinToolBatchMinterView");
-  const view = await hre.ethers.getContractAt("CoinToolBatchMinterView", "0x2C5792AF38b5477ce5dE5d05fBF51C0F7e0Bd936");
+  const view = await hre.ethers.getContractAt("CoinToolBatchMinterView", "0xf493830d33800035B945598F2520D18060f3e94e");
 
-  // const view = CointTool.attach("0x2C5792AF38b5477ce5dE5d05fBF51C0F7e0Bd936")
+  // const view = CointTool.attach("0xf493830d33800035B945598F2520D18060f3e94e")
 
   // !!! Mandatory de schimbat !!!!
   /// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -39,16 +39,16 @@ async function main() {
 
   let i=1;
   let addresses=[];
-  for(i=1;i<=parseInt(amountProxy);i++){
-       let prx = await view.getProxyForSpecificId(
-           userAddress,
-           coinTool.address,
-           i,
-           "0x01"
-           );
+  // for(i=1;i<=parseInt(amountProxy);i++){
+  //      let prx = await view.getProxyForSpecificId(
+  //          userAddress,
+  //          coinTool.address,
+  //          i,
+  //          "0x01"
+  //          );
        
-       addresses.push(prx);
-  }
+  //      addresses.push(prx);
+  // }
   console.log("address list:",addresses); 
  
 }
